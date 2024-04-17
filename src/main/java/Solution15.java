@@ -7,6 +7,9 @@ public class Solution15 {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] > 0) {
+                break;
+            }
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -24,8 +27,14 @@ public class Solution15 {
                     }
                 } else if (sum < 0) {
                     j++;
+                    while (j < k && nums[j] == nums[j - 1]) {
+                        j++;
+                    }
                 } else {
                     k--;
+                    while (j < k && nums[k] == nums[k + 1]) {
+                        k--;
+                    }
                 }
             }
         }
