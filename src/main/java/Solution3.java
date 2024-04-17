@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution2 {
+public class Solution3 {
     public int lengthOfLongestSubstring(String s) {
         int maxLength = 0;
         Map<Character, Integer> map = new HashMap<>();
