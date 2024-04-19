@@ -13,11 +13,16 @@ public class Solution77 {
             list.add(new ArrayList<>(tmp));
             return;
         }
-        
+
         for (int i = start; i <= n; i++) {
+            // 剪枝
+            if (n - start + 1 < k) {
+                return;
+            }
+
             tmp.add(i);
             combine(n, k - 1, i + 1, tmp, list);
-            tmp.remove(Integer.valueOf(i));
+            tmp.remove(tmp.size() - 1);
         }
     }
 }
