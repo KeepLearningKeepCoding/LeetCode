@@ -13,6 +13,7 @@ public class Solution46 {
             list.add(createListFromArray(nums));
             return;
         }
+        
         for (int i = start; i < nums.length; i++) {
             swap(nums, start, i);
             permute(nums, start + 1, list);

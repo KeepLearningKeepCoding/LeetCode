@@ -14,6 +14,7 @@ public class Solution105 {
         if (left > right) {
             return null;
         }
+        
         int rootValue = preorder[rootIndex];
         TreeNode root = new TreeNode(rootValue);
         int mid = map.get(rootValue);

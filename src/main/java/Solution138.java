@@ -12,6 +12,7 @@ public class Solution138 {
             map.put(p, q);
             p = p.next;
         }
+        
         p = head;
         q = headNode.next;
         while (p != null) {
